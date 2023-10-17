@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Quicksand:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*header*/
+
+header {
+    width: 100%;
+    height: 600px;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(330, 100%, 50%, 0.377), hsla(33, 100%, 50%, 0.527), hsla(174, 72%, 56%, 0.562)),url(../Imagenes/Paseaperros.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(330, 100%, 50%, 0.377), hsla(33, 100%, 50%, 0.527), hsla(174, 72%, 56%, 0.562)),url(../Imagenes/Paseaperros.jpg);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 90vh;
+    display:block;
+}
+
+header .logo{
+    width: 15%;
+}
+
+nav{
+    text-align: center;
+    padding: 30px 50px 0 0;
+}
+
+header .textoHeader{
+    display: block;
+    height: 500px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    
+}
+
+
+.menu li a {
+    display: block;
+    border-style:hidden;
+    padding: 0.5rem;
+    color: #ffffff;
+    margin-right: 0.5rem;
+    
+}
+
+.active{
+    font-weight: 700;
+}
+.menu li a:hover:not(#buy a,.active) {
+    color: rgb(250, 142, 0);
+    animation: pulse;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.holaSoyJuan {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;  
+    background-size: auto;
+}
+
+.holaSoyJuan img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border: 3px solid hsl(174, 72%, 56%);
+    border-radius: 50%;
+    display: block;
+}
+
+.holaSoyJuan h2{
+    display: flex;
+    padding-left: 20px;
+    position: relative;
+}
+
+.textoJuan{
+    display: flex;
+    position: relative;
+    padding: 30px;
+    
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.ola{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.holaSoyJuan {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+/* Servicios */
+
+.contenedor h2{
+    text-align: center;
+}
+
+.galeriaIma{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.puertoImagen{
+    width: 30%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    height: 200px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, hsla(174, 72%, 56%, 0.562));
+}
+
+.puertoImagen > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hoverGale{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(33, 100%, 50%, 0.527);
+    transition: transform .5s;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hoverGale img{
+    width: 50px;
+}
+
+.hoverGale p{
+    color: #000;
+}
+
+.puertoImagen:hover .hoverGale{
+    transform: scale(1);
+}
+/* Servicios */
+
+/* Clientes */
+
+.contenedorDeClientes{
+    position: relative;
+    max-width: 800xp;
+    margin: 5% auto;
+}
+
+.contenedorDeClientes h2{
+    text-align: center;
+}
+
+.cartas{
+    padding: 30px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;  
+    background-size: auto;
+    align-items: center;
+}
+
+.cartas .carta{
+    display: flex;
+    width: 46%;
+    height: 200px;
+}
+
+.cartas .carta img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid hsl(174, 72%, 56%);
+    border-radius: 50%;
+    display: block;
+    margin-left: 100px;
+}
+
+.cartas .carta > .contenidoCarta{
+    width: 60%;
+    color: black;
+}
+
+.cartas .carta > .contenidoCarta{
+    font-weight: 300;
+    padding-top: 5px;
+    text-align: center;
+}
+
+
+
+/*Clientes*/
+
+/* Redes Sociales */
+.redesContenedor{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.redesVisu{
+    width: 20%;
+    text-align: center;
+}
+
+.redesVisu img{
+    width: 90%;
+}
+
+.redesVisu h5{
+    margin: 10px 0;
+}
+
+.redesVisu p{
+    font-weight: 300;
+    text-align: justify;
+}
+/* Redes Sociales */
+
+footer{
+    background:  hsla(330, 100%, 50%, 0.377);
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+footer h6{
+    text-align: center;
+    margin: 20px 0 0 0;
+    padding-bottom: 0%;   
+    font-weight: 800;
+    font-size: 200%;
+}
+
+.contenidoDePie p{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.contenidoDePie h4{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+    border-bottom: 2px solid greenyellow;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/*Responsive*/
+@media screen and (max-width: 900px) {
+    header{
+        background-position: center;
+    }
+
+    .holaSoyJuan{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .holaSoyJuan .textoJuan{
+        width: 90%;
+
+    }
+
+    .holaSoyJuan img{
+        width: 90%;
+    }
+
+    .galeriaIma{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .puertoImagen{
+        width: 40%;
+    }
+
+    .cartas .carta:first-child{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .redesVisu img{
+        width: 90%;
+    }
+
+    .redesVisu h5{
+        margin-top: 20%;
+    }
+
+    .redesVisu p{
+        margin-bottom: -10%;
+    }
+
+}
+
+@media screen and (max-width:500px){
+    .textoHeader h1{
+        font-size: 35px;
+    }
+
+    .puertoImagen{
+        width: 55%;
+    }
+
+    /* Clients */
+
+    .cartas .carta{
+        height: 200px;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+    }
+
+    .cartas .carta img{
+        width: 150px;
+        height: 150px;
+        background-size: contain;
+    }
+
+    /* Footer */
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4{
+        border: none;
+    }
+
+    .content-foo p{
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+}
