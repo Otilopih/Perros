@@ -21,55 +21,68 @@ header {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    top: 0;
+    left: 0;
     background-repeat: no-repeat;
     background-position: right;
     min-height: 90vh;
-    display:block;
-}
-
-header .logo{
-    width: 15%;
+    display:flex;
 }
 
 nav{
-    text-align: center;
-    padding: 30px 50px 0 0;
-}
-
-header .textoHeader{
-    display: block;
-    height: 500px;
+    background: rgb(33, 156, 144);
+    height: 80px;
     width: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+nav .logo{
+    height: 50px;
+}
+
+nav .tituloDePagina{
     color: #fff;
-    
-}
-
-
-.menu li a {
-    display: block;
-    border-style:hidden;
-    padding: 0.5rem;
-    color: #ffffff;
-    margin-right: 0.5rem;
-    
-}
-
-.active{
     font-weight: 700;
 }
-.menu li a:hover:not(#buy a,.active) {
-    color: rgb(250, 142, 0);
-    animation: pulse;
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    font-weight: 700;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    color: rgb(238, 147, 34);
+    transition: .5s;
+    text-decoration: none;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
 }
 
-body {
-    font-family: 'Josefin Sans', sans-serif;
-    font-family: 'Quicksand', sans-serif;
-}
+/*Menu*/
 
 .holaSoyJuan {
     padding: 60px 0;
@@ -122,113 +135,147 @@ body {
 
 }
 
-/* Servicios */
+/* Zona de trabajo */
 
 .contenedor h2{
     text-align: center;
 }
-
-.galeriaIma{
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.puertoImagen{
-    width: 30%;
-    margin-bottom: 10px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    height: 200px;
-    box-shadow: 0 0 6px 0 rgba(0, 0, 0, hsla(174, 72%, 56%, 0.562));
-}
-
-.puertoImagen > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.hoverGale{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    transform: scale(0);
-    background: hsla(33, 100%, 50%, 0.527);
-    transition: transform .5s;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.hoverGale img{
-    width: 50px;
-}
-
-.hoverGale p{
-    color: #000;
-}
-
-.puertoImagen:hover .hoverGale{
-    transform: scale(1);
-}
-/* Servicios */
+/* Zona de trabajo */
 
 /* Clientes */
 
-.contenedorDeClientes{
+h2{
+    text-align: center;
+}
+
+.container{
     position: relative;
-    max-width: 800xp;
-    margin: 5% auto;
+    width: 100%;
+    min-height: 450px;
 }
-
-.contenedorDeClientes h2{
+.container .contents-wraper{
+    width: 70%;
+    min-height: inherit;
+    margin: 30px auto;
     text-align: center;
 }
-
-.cartas{
-    padding: 30px 0;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    overflow: hidden;  
-    background-size: auto;
-    align-items: center;
+.contents-wraper .header h1{
+    position: relative;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
 }
-
-.cartas .carta{
+.contents-wraper .header h1::before{
+    content: '';
+    width: 200px;
+    height: 2px;
+    background-color: rgb(33, 156, 144);
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+}
+.contents-wraper .testRow{
+    width: 100%;
+    min-height: inherit;
+    position: relative;
+    overflow: hidden;
+}
+.testRow .testItem{
+    width: 100%;
+    height: 100%;
+    position: absolute;
     display: flex;
-    width: 46%;
-    height: 200px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-
-.cartas .carta img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 3px solid hsl(174, 72%, 56%);
+.testRow .testItem:not(.active){
+    top: 0;
+    left: -100%;
+}
+.testRow .testItem img{
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
-    display: block;
-    margin-left: 100px;
+    object-fit: cover;
+    margin-bottom: 5px;
+    outline: 2px solid rgb(216, 63, 49);
+    outline-offset: 2px;
+}
+.testRow .testItem h3{
+    font-size: 30px;
+    padding: 7px;
+    color: #000;
+}
+.testRow .testItem h4{
+    font-size: 30px;
+    color: #000;
+}
+.testRow .testItem p{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    padding: 10px;
+    color: #000;
+}
+.contents-wraper .indicators{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    cursor: pointer;
+}
+.contents-wraper .indicators .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0px 3px;
+    border: 3px solid rgb(216, 63, 49);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+}
+.contents-wraper .indicators .active{
+    background-color: #006994;
 }
 
-.cartas .carta > .contenidoCarta{
-    width: 60%;
-    color: black;
+@keyframes next1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }
 }
 
-.cartas .carta > .contenidoCarta{
-    font-weight: 300;
-    padding-top: 5px;
-    text-align: center;
+@keyframes prev1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: 100%;
+    }
 }
-
-
-
+@keyframes prev2{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
+}
 /*Clientes*/
 
 /* Redes Sociales */
@@ -249,20 +296,20 @@ body {
 
 .redesVisu h5{
     margin: 10px 0;
+    text-align: center;
 }
 
 .redesVisu p{
     font-weight: 300;
-    text-align: justify;
+    text-align: center;
 }
 /* Redes Sociales */
 
 footer{
-    background:  hsla(330, 100%, 50%, 0.377);
+    background: rgb(238, 147, 34);
     padding: 60px 0 30px 0;
     margin: auto;
     overflow: hidden;
-    
 }
 
 footer h6{
@@ -271,6 +318,7 @@ footer h6{
     padding-bottom: 0%;   
     font-weight: 800;
     font-size: 200%;
+    color: #fff;
 }
 
 .contenidoDePie p{
@@ -280,6 +328,7 @@ footer h6{
     margin: auto;
     padding-bottom: 5px;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .contenidoDePie h4{
@@ -287,10 +336,296 @@ footer h6{
     width: 60%;
     justify-content: center;
     margin: auto;
-    border-bottom: 2px solid greenyellow;
+    border-bottom: 2px solid rgb(33, 156, 144);
     padding-bottom: 5px;
     margin-bottom: 10px;
+    color: #fff;
 }
+
+/* Servicios */
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3rem;
+}
+p,a {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+.body {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto;
+    grid-template-areas:
+        'anuncio'
+        'services'
+        'descrip'
+        'text'
+        'pricing'
+        'buy'
+    ;
+    min-width: 100vw;
+    background-image: url(../Imagenes/fondo-1.jpg);
+    padding-bottom: 3rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+.anuncio {
+    grid-area: anuncio;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    max-width: 65rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    color: #fff;
+}
+.anuncio p {
+    text-align: justify;
+    font-weight: bold;
+}
+.anuncio h1 {
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #000;
+}
+.contenedorservicios {
+    grid-area: services;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.4rem;
+}
+.rectangulo {
+    width: 20rem; /* Ancho del rectángulo */
+  height: 30rem; /* Alto del rectángulo */
+  background-image: url(../Imagenes/Border.jpg); /* Color de fondo del rectángulo */
+  margin: 20px; /* Margen entre los rectángulos */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrar contenido horizontalmente */
+  align-items: center; /* Centrar contenido verticalmente */
+  border: 3px transparent ;
+  border-top-left-radius: 3rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-size: cover;
+  color: #fff;
+
+}
+.rectangulo h1 {
+    margin-top: 1rem;
+    text-shadow: 2px 2px 3px #000;
+}
+.rectangulo p {
+    margin: auto auto auto 2rem;
+    font-size: 1.2rem;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+}
+.block p {
+    color: #fff;
+    margin: auto;
+}
+.price {
+    font-size: 3rem;
+}
+
+.buyli {    
+    text-decoration: none;
+    display: block;
+    background-color: #FFD93D;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+}
+.buyli:hover {
+    color: #000;
+    text-decoration: none;
+    animation: pulse;
+    animation-duration: 1.5s;
+}
+.iconov {
+    color:rgba(0, 128, 0, 0.767);
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+.iconor {
+    color: red;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+.rectangulo:hover {
+    transform: scale(1.1); 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); 
+}
+.descripcion1 {
+    grid-area: descrip;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 3rem;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding-bottom: 1rem;
+}
+.descripcion1 h1 {
+    font-size: 1.8rem;
+}
+.pricing-section {
+    grid-area: pricing;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  .container {
+    color: white;
+    font-style: italic;
+  }
+  .plan {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 2rem 0rem 1rem 0rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 1rem;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+  }
+  .plan h1 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  .plan p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0rem 1.5rem 0 1.5rem;
+  }
+  @media (max-width: 767px) {
+
+    .checkbtn{
+        display:flex;
+    }
+    ul{
+        position: relative;
+        width: 70%;
+        height: 40vh;
+        background: #CD5C08;
+        top: 80px;
+        left: 60px;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: flex;
+        margin: 10px 0;
+        line-height: 20px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        text-align: left;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: rgb(33, 156, 144);
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+    .anuncio {
+        grid-area: anuncio;
+        margin: auto;
+        padding: 1.5rem;
+        text-align: center;
+        max-width: 40rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        color: white;
+    }
+    .anuncio p {
+        text-align: justify;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .contenedorservicios {
+        flex-direction: column;
+        align-items: center;
+    }
+    .rectangulo {
+        width: 20rem; /* Ancho del rectángulo */
+      height: 16.5rem; /* Alto del rectángulo */
+    }
+    .iconov {
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+    }
+    .iconor {
+        font-size: 0.9rem;
+        margin-right: 0.5rem;
+    }
+    .rectangulo h1 {
+        margin-top: 0.5rem;
+        font-size: 1.5rem;
+        overflow-y: hidden;
+        padding: 0.5rem;
+    }
+    .rectangulo p {
+        font-size: 0.9rem;
+        overflow-y: hidden;
+        padding: 0.4rem;
+        margin-top: 0.2rem;
+    }
+    .precio, .price {
+        font-size: 1rem;
+    }
+    .block {
+        margin-top: 0.4rem;
+    }
+    .descripcion1 {
+        max-width: 20rem;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .buyli {
+        font-size: 0.8rem;
+    }
+    .pricing-section {
+        grid-area: pricing;
+        display: flex;
+        flex-direction: column;
+      }
+      .plan {
+        padding: 2rem 1rem 1rem 1rem;
+        margin: 16px 16px 16px 0px;     
+    }
+
+    .testItem{
+        padding-bottom: 30px ;
+    }
+
+    .mapa{
+        align-items: center;
+    }
+  }
+
+  /* Servicios */
 
 /*Responsive*/
 @media screen and (max-width: 900px) {
@@ -338,6 +673,13 @@ footer h6{
 
     .redesVisu p{
         margin-bottom: -10%;
+    }
+
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
     }
 
 }
@@ -391,4 +733,108 @@ footer h6{
     .titulo-final{
         font-size: 20px;
     }
+
+    .container .contents-wraper{
+        width: 90%;
+    }
+    .contents-wraper .header h1{
+        font-size: 32px;
+    }
+    .testRow .testItem h3{
+        font-size: 26px;
+    }
+    .testRow .testItem p{
+        font-size: 16px;
+        letter-spacing: initial;
+        line-height: initial;
+    }
+
+    .checkbtn{
+        display:flex;
+    }
+    ul{
+        position: relative;
+        width: 70%;
+        height: 40vh;
+        background: #CD5C08;
+        top: 80px;
+        left: 60px;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: flex;
+        margin: 10px 0;
+        line-height: 20px;
+    }
+    nav ul li a{
+        font-size: 20px;
+        text-align: left;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: rgb(33, 156, 144);
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+    .redesVisu{
+         margin-right: 20px;
+         text-align: left;
+    }
+
 }
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+
+    .rectangulo {
+        width: 25rem;
+      height: 21rem; 
+    }
+    .rectangulo h1 {
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+    .rectangulo p {
+        overflow-y: hidden;
+        margin: auto auto auto 2rem;
+        font-size: 1rem;
+        padding: 0.3rem;
+        margin-top: 0.3rem;
+    }
+    .iconov {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+    }
+    .iconor {
+        font-size: 1rem;
+        margin-right: 0.5rem;
+    }
+    .price {
+        font-size: 2rem;
+    }
+    .descripcion1 {
+        max-width: 20rem;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .pricing-section {
+        grid-area: pricing;
+        display: flex;
+        flex-direction: column;
+        margin-right: 1rem;
+      }
+    .plan {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+    .block p {
+        color: #fff;
+        margin: auto;
+    }
+    .anuncio {
+        padding: 1rem;
+    }
+  }

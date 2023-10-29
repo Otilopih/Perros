@@ -7,23 +7,40 @@
     <title>Perros</title>
     <link rel="shortcut icon" href="Imagenes/iconoperro.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,600&family=Quicksand:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 </head>
 
 <body>
     <header>
-        <img class="logo" src="Imagenes/iconoperropng.png" alt="Silueta chachorro">
-        <div class=textoHeader>
-            <h1> Juan Martin Aguilar</h1>
-            <nav>
-                <ul class="menu">
-                    <li><a class="active" href="Index.html">Inicio</a></li>
-                    <li><a href="#">Quien soy</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
+
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fas-bars"></i>
+            </label>
+            <a href="#" class="enlace">
+                <img src="Imagenes/iconoperropng.png" alt="" class="logo">
+                <h10 class="tituloDePagina">Juan Martín Aguilar</h10>
+            </a>
+            <ul>
+                <li><a class="active" href="#">Inicio</a></li>
+                <li><a href="#Juan">¿Quién Soy?</a></li>
+                <li><a href="#zona">Zona de trabajo</a></li>
+                <li><a href="#clientes">¿Qué dicen nuestros clientes?</a></li>
+                <li><a href="#Redes">Nuestras redes sociales</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <section></section>
 
         <div class="ola" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
@@ -34,144 +51,367 @@
 
     <main>
         <section class="holaSoyJuan">
-            <h2 class="tituloJ">Soy Juan Aguilar</h2>
+            <h2 class="tituloJ" id="Juan">Hola, soy Juan Aguilar</h2>
             <img src="Imagenes/Juan Aguilar.jpg" alt="">
             <div class="textoJuan">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit provident maiores veniam
-                    sequi
-                    nesciunt. Incidunt perferendis repellat dolore corporis ipsam assumenda laudantium non, omnis unde
-                    illum
-                    ad consectetur aliquid.
+                <p>Tengo 31 años y amo a los perros, por eso quise empezar en mi tiempo libre este sitio para trabajar
+                    de
+                    Paseaperros y entrenador canino,
+                    trabajo con veterinarios. Por esta razón decidí combinar mis dos pasiones: el cuidado de animales y
+                    la enseñanza de los
+                    perros.
+                    Decidí hacer una página web para ayudar y ofrecer un servicio especial hacia todas las personas que
+                    lo necesiten.
+                    Espero complacerlos con el servicio que ofrezco y que su animal lo disfrute,
+                    nos vemos pronto.
+                    Juan.
                 </p>
             </div>
         </section>
 
-        <section class="servicios">
-            <div class="contenedor">
-                <h2 class="titulo">Servicios</h2>
-                <div class="galeriaIma">
-                    <div class="puertoImagen">
-                        <img src="Imagenes/BLog.jpg" alt="">
-                        <div class="hoverGale">
-                            <img src="Imagenes/Huella.png" alt="">
-                            <p>¿Quién Soy?</p>
-                        </div>
-                    </div>
+        <section class="zonaDeTrabajo" id="zona">
+            <h2>Zona de trabajo</h2>
 
-                    <div class="puertoImagen">
-                        <img src="Imagenes/Husky.webp" alt="">
-                        <div class="hoverGale">
-                            <img src="Imagenes/Huella.png" alt="">
-                            <p>Blog</p>
-                        </div>
-                    </div>
-
-                    <div class="puertoImagen">
-                        <img src="Imagenes/Contacto.jpg" alt="">
-                        <div class="hoverGale">
-                            <img src="Imagenes/Huella.png" alt="">
-                            <p>Contacto</p>
-                        </div>
-                    </div>
-
-                    <div class="puertoImagen">
-                        <img src="Imagenes/Entrenamiento.jpg" alt="">
-                        <div class="hoverGale">
-                            <img src="Imagenes/Huella.png" alt="">
-                            <p>Servicios</p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+            <div class="mapa"><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26281.729401098783!2d-58.441614996378476!3d-34.57339628294227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb59c771eb933%3A0x6b3113b596d78c69!2sPalermo%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1698541583774!5m2!1ses-419!2sar"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </section>
 
         <section class="contenedorDeClientes">
-            <h2 class="Titulo">¿Que dicen nuestros clientes?</h2>
-            <div class="cartas">
+            <h2 class="Titulo" id="clientes">¿Qué dicen nuestros clientes?</h2>
+            <div class="container">
 
-                <div class="carta">
-                    <img src="Imagenes/Cliente 1.jpg" alt="">
-                    <div class="contenidoCarta">
-                        <h4>Name</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
-                    </div>
+                <div class="contents-wraper">
+
+
+
+                    <section class="testRow">
+
+                        <div class="testItem active">
+                            <img src="Imagenes/Cliente 1.jpeg">
+                            <h3>Silvina Martinez</h3>
+                            <h4>Belgrano</h4>
+                            <p>Soy una persona muy meticulosa cuando se trata de mi perra salchicha, Lola. Después de
+                                entrevistar a varios paseadores, encontré a alguien que superó mis expectativas. Este
+                                paseador de perros no solo se encarga de Lola, sino que también se asegura de que esté
+                                segura y feliz. Los informes detallados que recibo después de cada paseo me brindan
+                                tranquilidad y demuestran un alto nivel de compromiso.</p>
+                        </div>
+
+                        <div class="testItem">
+                            <img src="Imagenes/Cliente 2.jpg">
+                            <h3>Juan Nuefmann</h3>
+                            <h4>Palermo</h4>
+                            <p>Después de un accidente, me resultaba imposible sacar a pasear a mi perrito, Toby.
+                                Contraté a un paseador de perros a través de este servicio, y ha sido un alivio
+                                absoluto. Toby se lleva muy bien con el paseador y regresa de sus paseos feliz y
+                                cansado. La comunicación ha sido excelente, y estoy agradecido por la flexibilidad y
+                                profesionalismo del paseador.</p>
+                        </div>
+
+                        <div class="testItem">
+                            <img src="Imagenes/Cliente 3.jpg">
+                            <h3>Marta Cortez</h3>
+                            <h4>Barrio Norte</h4>
+                            <p>Contraté a este servicio de paseo de perros hace un mes, y no podría estar más
+                                satisfecha. Mi perro, Polo, siempre vuelve de su paseo feliz y agotado. El paseador es
+                                muy puntual y se nota que realmente ama a los perros, Juan es muy amoroso con los
+                                perros.
+                                ¡Recomiendo este servicio a todos
+                                los dueños de mascotas!</p>
+                        </div>
+
+                        <div class="testItem">
+                            <img src="Imagenes/Cliente 4.jpg">
+                            <h3>Guillermo Ferrara</h3>
+                            <h4>Palermo Chico</h4>
+                            <p>Estoy muy impresionado con el servicio de paseo de perros que he estado utilizando. El
+                                paseador siempre llega a tiempo y se preocupa por la seguridad de mi perra, Bella.
+                                Además, me envían fotos y actualizaciones después de cada paseo, lo que me da
+                                tranquilidad. ¡Recomiendo este servicio altamente!</p>
+                        </div>
+
+                        <div class="testItem">
+                            <img src="Imagenes/Cliente 5.jpg">
+                            <h3>Josefina Labreux</h3>
+                            <h4>Recoleta</h4>
+                            <p> Lo contraté por recomendaciones que había recibido para cuidar a mi golden, Max, durante
+                                mis largas
+                                jornadas de trabajo. Desde el primer día, noté una gran diferencia en el comportamiento
+                                de Max. Estaba más feliz y saludable. El paseador siempre llega a tiempo, se comunica
+                                bien y muestra un amor genuino por los perros. Max se emociona cada vez que lo ve
+                                llegar y cada vez hace más caso gracias al adiestramiento. ¡Recomiendo encarecidamente
+                                este servicio!</p>
+                        </div>
+
+                    </section>
+
+                    <section class="indicators">
+                        <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+                        <div class="dot" attr='1' onclick="switchTest(this)"></div>
+                        <div class="dot" attr='2' onclick="switchTest(this)"></div>
+                        <div class="dot" attr='3' onclick="switchTest(this)"></div>
+                        <div class="dot" attr='4' onclick="switchTest(this)"></div>
+                    </section>
+
                 </div>
-
-                <div class="carta">
-                    <img src="Imagenes/Cliente 2.jpg" alt="">
-                    <div class="contenidoCarta">
-                        <h4>Name</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
-                    </div>
-                </div>
-
-                <div class="carta">
-                    <img src="Imagenes/Cliente 3.jpg" alt="">
-                    <div class="contenidoCarta">
-                        <h4>Name</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
-                    </div>
-                </div>
-
-                <div class="carta">
-                    <img src="Imagenes/Cliente 4.jpg" alt="">
-                    <div class="contenidoCarta">
-                        <h4>Name</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
-                    </div>
-                </div>
-
             </div>
 
+            <script type="text/javascript">
+
+                // Acceso a las reseñas
+                let testSlide = document.querySelectorAll('.testItem');
+                // Acceso a los indicadores
+                let dots = document.querySelectorAll('.dot');
+
+                var counter = 0;
+
+                // Evento del click
+                function switchTest(currentTest) {
+                    currentTest.classList.add('active');
+                    var testId = currentTest.getAttribute('attr');
+                    if (testId > counter) {
+                        testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+                        counter = testId;
+                        testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+                    }
+                    else if (testId == counter) { return; }
+                    else {
+                        testSlide[counter].style.animation = 'prev1 0.5s ease-in forwards';
+                        counter = testId;
+                        testSlide[counter].style.animation = 'prev2 0.5s ease-in forwards';
+                    }
+                    indicators();
+                }
+
+                // Agrega y remueve la reseña activa
+                function indicators() {
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(' active', '');
+                    }
+                    dots[counter].className += ' active';
+                }
+
+                // Desplazamiento auto
+                function slideNext() {
+                    testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+                    if (counter >= testSlide.length - 1) {
+                        counter = 0;
+                    }
+                    else {
+                        counter++;
+                    }
+                    testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+                    indicators();
+                }
+                function autoSliding() {
+                    deleteInterval = setInterval(timer, 2000);
+                    function timer() {
+                        slideNext();
+                        indicators();
+                    }
+                }
+                autoSliding();
+
+                // Detiene la transición automática
+                const container = document.querySelector('.indicators');
+                container.addEventListener('mouseover', pause);
+                function pause() {
+                    clearInterval(deleteInterval);
+                }
+
+                //Mueve el la lista sin que el mouse este encima
+                container.addEventListener('mouseout', autoSliding);
+
+            </script>
         </section>
 
         <section class="nuestrasRedesSociales">
             <div class="contenedor">
-                <h2 class="titulo">Nuestras redes sociales</h2>
+                <h2 class="titulo" id="Redes">Nuestras redes sociales</h2>
                 <div class="redesContenedor">
                     <div class="redesVisu">
-                        <img src="Imagenes/Insta.png" alt="">
-                        <h5>Nombre</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, quo!</p>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="Imagenes/Insta.png" alt=""></a>
+                        <h5>@Juanguperr0s</h5>
+                        <p>Acá traemos novedades sobre los cursos que ofrezco, los entrenamientos y los paseos, entre otras
+                            cosas.</p>
                     </div>
 
                     <div class="redesVisu">
-                        <img src="Imagenes/x.png" alt="">
-                        <h5>Nombre</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, quo!</p>
+                        <a href="https://twitter.com/?lang=es" target="_blank"><img src="Imagenes/x.png" alt=""></a>
+                        <h5>Juanguperros</h5>
+                        <p>En X traemos noticias y estudios científicos sobre las distintas razas de perros, su
+                            personalidad y sus mañas.</p>
                     </div>
 
                     <div class="redesVisu">
-                        <img src="Imagenes/Tik.png" alt="">
-                        <h5>Nombre</h5>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore, quo!</p>
+                        <a href="https://www.tiktok.com/login?lang=es&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Des"
+                            target="_blank"><img src="Imagenes/tik.png" alt=""></a>
+                        <h5>Juanguperros</h5>
+                        <p>Acá subimos shorts con los perros, momentos divertidos con ellos y datos curiosos. En estos shorts
+                            cortos aprendemos más sobre estos animales que tanto amamos.</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="body">
+            <div class="servicios" id="servicios">
+                <div class="anuncio">
+                    <h1>Servicios</h1>
+                    <br>
+                    <p>Estoy emocionado de presentarte mi servicio de paseo de perros. Sabemos lo importante que es para
+                        ti
+                        que tu amigo peludo reciba la atención y el ejercicio que necesita para mantenerse feliz y
+                        saludable.
+                        <br>
+                        <br>
+                        Con mi experiencia y pasión por los perros, te ofrezco un servicio de paseo de primera calidad.
+                        Cada
+                        paseo es más que una simple caminata; es una oportunidad para que tu perro explore, socialice y
+                        disfrute de la naturaleza.
+                    </p>
+                </div>
+                <div class="contenedorservicios">
+                    <div class="rectangulo">
+                        <h1>Básico</h1>
+                        <p><span class="iconov"><i class='bx bxs-check-circle'></i></span>Paseos Diarios</p>
+                        <p><span class="iconov"><i class='bx bxs-check-circle'></i></span> Actualizaciones de Ruta</p>
+                        <p><span class="iconov"><i class='bx bxs-check-circle'></i></span> Comunicación regular</p>
+                        <p><span class="iconor"><i class='bx bxs-x-circle'></i></span> Adiestramiento canino</p>
+                        <div class="block">
+                            <p class="precio"><span class="price">15.000</span>/Por mes</p>
+                            <a href="#buyform" class="buyli">Contratar</a>
+                        </div>
+                    </div>
+
+                    <div class="rectangulo">
+                        <h1>Premium</h1>
+                        <p><span class="iconov"><i class='bx bxs-check-circle'></i></span>Paseos extendidos</p>
+                        <p><span class="iconov"><i class='bx bxs-check-circle'></i></span> Ruta personalizada</p>
+                        <p><span class="iconov"><i class='bx bxs-check-circle'></i></span> Comunicación regular</p>
+                        <p><span class="iconov"><i class='bx bxs-check-circle'></i></span> Adiestramiento canino</p>
+                        <div class="block">
+                            <p class="precio"><span class="price">38.000</span>/Por mes</p>
+                            <a href="#buyform" class="buyli">Contratar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="descripcion1">
+                    <h1>Acá te hablo un poco más acerca de mis servicios</h1>
+                </div>
+                <br>
+                <br>
+                <div class="pricing-section">
+                    <div class="plan">
+                        <h1>Plan Básico:</h1>
+                        <br>
+                        <p>Es perfecto para los dueños que desean lo esencial para sus mascotas.
+                            Ofrecemos paseos diarios de 40 minutos que mantendrán a su perro activo y saludable. Además,
+                            actualizaremos
+                            constantemente la ruta que seguimos y te mantendremos informado sobre cada paseo. La
+                            comunicación
+                            regular es clave para brindarte tranquilidad mientras trabajas o te ocupas de tus asuntos,
+                            sabiendo
+                            que
+                            tu perro está en buenas manos.</p>
+                    </div>
+                    <br>
+                    <div class="plan">
+                        <h1>Plan Premium:</h1>
+                        <br>
+                        <p>
+                            Lleva el cuidado de tu perro al siguiente nivel. Los paseos son extendidos (90 minutos),
+                            brindando a tu perro más tiempo para explorar y disfrutar. Además, cada ruta es
+                            personalizada
+                            para
+                            satisfacer las necesidades y preferencias específicas de tu perro. La comunicación regular
+                            sigue
+                            siendo una prioridad, pero también ofrecemos adiestramiento canino de alta calidad. No solo
+                            paseamos a tu perro, sino que también trabajamos en mejorar su comportamiento y habilidades,
+                            lo
+                            que lo convierte en un compañero más feliz y equilibrado.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="compra" id="buyform">
+                    <div class="container">
+                        <h1 class="mt-3 text-center">Contrata mis servicios</h1>
+                        <form id="formbuy" action="https://formspree.io/f/xnqkwzya" method="post">
+                            <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="apellido">Apellido:</label>
+                                <input type="text" class="form-control" id="apellido" name="apellido" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="correo">Correo:</label>
+                                <input type="email" class="form-control" id="correo" name="correo" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono:</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="opcion">Plan:</label>
+                                        <select class="form-control" id="opcion" name="opcion" onchange="mostrarValor()"
+                                            required>
+                                            <option value=""> </option>
+                                            <option value="Basico">Basico</option>
+                                            <option value="Premium">Premium</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="valor">Valor:</label>
+                                        <input type="text" class="form-control" id="valor" name="valor" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary ">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="services.js"></script>
 
     </main>
 
     <footer>
         <div class="contenedor">
-            <div class="contenidoDePie">
+            <div class="contenidoDePie" id="contacto">
                 <h4>WhatsApp</h4>
-                <p>1599742062</p>
+                <p>54+ 11-9974-2062</p>
             </div>
 
             <div class="contenidoDePie">
                 <h4>Email</h4>
-                <p>Pepito@gmail.com</p>
+                <p>Juaguilar1@gmail.com</p>
             </div>
 
             <div class="contenidoDePie">
                 <h4>Localidad</h4>
-                <p>CABA</p>
+                <p>Buenos Aires, Palermo</p>
             </div>
         </div>
-        <h6 class="tituloFinal">&copy; Paseaperros</h6>
+        <h6 class="tituloFinal">&copy; JuanMartínAguilar</h6>
     </footer>
+
 
 </body>
 
